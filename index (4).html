@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W Coffee - Menu</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        header { background: #222; color: white; padding: 10px; position: fixed; width: 100%; top: 0; z-index: 10; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+        header nav ul { display: flex; justify-content: center; gap: 50px; list-style: none; padding: 0; }
+        header nav a { color: white; text-decoration: none; font-size: 18px; }
+        header nav a:hover { color: #f4c542; }
+        .dropdown { position: relative; }
+        .dropbtn { background: #3498DB; color: white; padding: 16px; font-size: 20px; border: none; cursor: pointer; }
+        .dropdown:hover .dropbtn { background: #2980B9; }
+        .dropdown-content { display: none; position: absolute; background: #f1f1f1; min-width: 160px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { padding: 12px 16px; color: black; text-decoration: none; }
+        .dropdown-content a:hover { background: #ddd; }
+        .hero { background: url('q.jpg') no-repeat center/cover; height: 40vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
+        .menu-section { padding: 50px 0; text-align: center; }
+        .menu-item { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; }
+        .menu-card { background: #f4f4f4; padding: 20px; width: 250px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s; text-align: center; }
+        .menu-card:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
+        .menu-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .menu-card h3 { font-size: 20px; }
+        .menu-card span { font-size: 18px; color: #f4c542; font-weight: bold; }
+        .order-btn { background: #f4c542; color: #333; padding: 10px 30px; font-size: 18px; border-radius: 5px; text-decoration: none; transition: transform 0.3s; }
+        .order-btn:hover { transform: scale(1.05); background: #ff7b00; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="About Us.html">About</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+            <li><a href="order.html">Order</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#HotCoffee">Hot Coffee</a>
+                    <a href="#ColdCoffee">Cold Coffee</a>
+                    <a href="#IceCream">Ice Cream</a>
+                    <a href="#WinterBox">Winter Box</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Our Menu</h1>
+</section>
+
+<div style="position: relative; margin-left: 20px;">
+    <a href="javascript:void(0);" onclick="toggleCart()" style="color: white; font-size: 20px; text-decoration: none;">
+        <i class="fas fa-shopping-cart"></i> Cart
+    </a>
+</div>
+
+<script>
+    let cart = [];
+    function addToCart(product) {
+        cart.push(product);
+        alert("The product has been added to the cart!");
+    }
+</script>
+
+<section class="menu-section" id="HotCoffee">
+    <h2>Hot Coffee</h2>
+    <div class="menu-item">
+        <div class="menu-card"><img src="w18.webp" alt="Spence Latte"><h3>Spence Latte</h3><span>1.800ر.ع</span><button onclick="addToCart('Spence Latte')">Add to Cart</button></div>
+        <div class="menu-card"><img src="w8.jpeg" alt="Hot Americano"><h3>Hot Americano</h3><span>1.000ر.ع</span><button onclick="addToCart('Hot Americano')">Add to Cart</button></div>
+        <div class="menu-card"><img src="w7.jpeg" alt="Spanish Latte"><h3>Spanish Latte</h3><span>1.500ر.ع</span><button onclick="addToCart('Spanish Latte')">Add to Cart</button></div>
+        <div class="menu-card"><img src="w16.webp" alt="Cappuccino"><h3>Cappuccino</h3><span>1.500ر.ع</span><button onclick="addToCart('Cappuccino')">Add to Cart</button></div>
+    </div>
+</section>
+
+<section class="menu-section" id="ColdCoffee">
+    <h2>Cold Coffee</h2>
+    <div class="menu-item">
+        <div class="menu-card"><img src="w13.jpeg" alt="Melik Chic Orio"><h3>Melik Chic Orio</h3><span>1.800ر.ع</span><button onclick="addToCart('Melik Chic Orio')">Add to Cart</button></div>
+        <div class="menu-card"><img src="w10.jpeg" alt="Cold Caramel Frappuccino"><h3>Cold Caramel Frappuccino</h3><span>1.000ر.ع</span><button onclick="addToCart('Cold Caramel Frappuccino')">Add to Cart</button></div>
+        <div class="menu-card"><img src="w11.jpeg" alt="Cold Americano"><h3>Cold Americano</h3><span>1.500ر.ع</span><button onclick="addToCart('Cold Americano')">Add to Cart</button></div>
+        <div class="menu-card"><img src="w9.jpeg" alt="Cold Spanish Latte"><h3>Cold Spanish Latte</h3><span>1.500ر.ع</span><button onclick="addToCart('Cold Spanish Latte')">Add to Cart</button></div>
+    </div>
+</section>
+
+<section class="menu-section" id="IceCream">
+    <h2>Ice Cream</h2>
+    <div class="menu-item">
+        <div class="menu-card"><img src="sweet2.jpeg" alt="Nutella Ice Cream"><h3>Nutella Ice Cream</h3><span>1.800ر.ع</span><button onclick="addToCart('Nutella Ice Cream')">Add to Cart</button></div>
+        <div class="menu-card"><img src="sweet w1.jpeg" alt="Chocolate Ice Cream"><h3>Chocolate Ice Cream</h3><span>1.800ر.ع</span><button onclick="addToCart('Chocolate Ice Cream')">Add to Cart</button></div>
+        <div class="menu-card"><img src="sweet w.jpeg" alt="Coffee Ice Cream"><h3>Coffee Ice Cream</h3><span>1.800ر.ع</span><button onclick="addToCart('Coffee Ice Cream')">Add to Cart</button></div>
+    </div>
+</section>
+
+<section class="menu-section" id="WinterBox">
+    <h2>Winter Box</h2>
+    <div class="menu-item">
+        <div class="menu-card"><img src="box.jpeg" alt="Winter Box"><h3>Winter Box</h3><span>1.800ر.ع</span><button onclick="addToCart('Winter Box')">Add to Cart</button></div>
+    </div>
+</section>
+
+<div style="text-align: center; margin-top: 40px;">
+    <a href="order.html" class="order-btn">Order Now</a>
+</div>
+
+</body>
+</html>
+
+
+
+
+
